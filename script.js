@@ -24,14 +24,14 @@ const onGenerateSubmit = (e) => {
         urlInput.style.color = ''; // Reset the color to default
         clearUI(); // Reset
         showspinner();
-        setTimeout(() => { 
+        setTimeout(() => {
             hidespinner();
             generateQRCode(url, size);
             setTimeout(() => {
                 const saveurl = qr.querySelector('img').src; //src; //src;
                 createSaveButton(saveurl) //
             }, 100);
-         }, 1500);
+        }, 1500);
     }
 }
 
@@ -40,14 +40,18 @@ const generateQRCode = (url, size) => {
         text: url,
         width: size,
         height: size,
-        colorDark:"#000000",
-        colorLight:"#ffffff",
+        colorDark: "#000000",
+        colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
     });
 }
 
-const clearUI = ()=>{
+const clearUI = () => {
     qr.innerHTML = '';
+    const savebtn = document.getElementById('savelink');
+    if (savebtn) {
+        savebtn.remove();
+    }
 }
 
 const showspinner = () => {
@@ -59,11 +63,11 @@ const hidespinner = () => {
 
 const createSaveButton = (saveURL) => {
     const link = document.createElement('a');
-    link.id="savelink";
+    link.id = "savelink";
     link.classList = "download-btn";
     link.href = saveURL;
     link.download = "qrcode.png";
-    link.innerHTML="Save Image";
+    link.innerHTML = "Save Image";
     document.getElementById("generated").appendChild(link)
 }
 
