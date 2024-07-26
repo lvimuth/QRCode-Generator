@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR - Code generator</title>
     <link rel="stylesheet" href="style.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <!-- header -->
     <header>
@@ -22,7 +30,8 @@
         <div class="content">
             <h2>QR - Code generator</h2>
             <p>
-                Generate QR codes with your own content or link. Choose between various encoding methods, size, and color options. Save your QR codes as PNG or JPEG files for easy sharing.
+                Generate QR codes with your own content or link. Choose between various encoding methods, size, and
+                color options. Save your QR codes as PNG or JPEG files for easy sharing.
             </p>
             <p>
                 Enter your URL below to generate QR codes and download them as PNG or JPEG files
@@ -42,9 +51,10 @@
     </main>
     <div class="generated">
         <!-- spinner -->
-         <div class="loader" id="spinner"></div>
-         <!-- generated qr code -->
-         <div id="qrcode"></div>
+        <div class="loader" id="spinner"></div>
+        <!-- generated qr code -->
+        <div id="qrcode"></div>
     </div>
 </body>
+
 </html>
