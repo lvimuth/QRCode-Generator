@@ -31,6 +31,12 @@ img{
     width: 100%;
 }
 
+#generate-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
 .content{
     width: 50%;
     display: flex;
@@ -38,8 +44,54 @@ img{
     justify-content: center;
     margin: 2rem 3rem;
     text-align: left;
-    color: gray;
+    color: rgb(104, 104, 104);
     }
+.inputurl{
+    border: 2px solid rgb(194, 194, 194);
+    padding: 10px;
+    border-radius: 0.2rem;
+}
+
+.selected{
+    border: 2px solid rgb(194, 194, 194);
+    padding: 10px;
+    border-radius: 0.2rem;
+}
+
+.submit{
+    padding: 10px;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    background-color: #0297d4;
+    border: 2px solid #0297d4;
+    color: white !important;
+    cursor: pointer;
+}
+
+/* Spinner */
+.loader{
+    margin: 10px auto;
+    border: 0.5rem solid rgb(194, 194, 194);
+    border-radius: 50%;
+    border-top: 0.5rem solid #0297d4;
+    width: 2rem;
+    height: 2rem;
+
+    /* safari */
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#qrcode{
+    margin: auto;
+    max-width: 1200px;
+    width: max-content;
+}
 
 /* responsive design */
 @media screen and (max-width: 600px) {
