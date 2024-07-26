@@ -66,6 +66,20 @@ img{
     border: 2px solid #0297d4;
     color: white !important;
     cursor: pointer;
+    font-weight: 600;
+}
+
+.download-btn{
+    display: block;
+    width: 20%;
+    text-align: center;
+    background-color: rgb(200, 55, 55);
+    margin: 20px auto;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.2rem;
+    font-weight: 600;
 }
 
 /* Spinner */

@@ -27,6 +27,10 @@ const onGenerateSubmit = (e) => {
         setTimeout(() => { 
             hidespinner();
             generateQRCode(url, size);
+            setTimeout(() => {
+                const saveurl = qr.querySelector('img').src; //src; //src;
+                createSaveButton(saveurl) //
+            }, 100);
          }, 1500);
     }
 }
@@ -51,6 +55,16 @@ const showspinner = () => {
 }
 const hidespinner = () => {
     document.getElementById('spinner').style.display = 'none';
+}
+
+const createSaveButton = (saveURL) => {
+    const link = document.createElement('a');
+    link.id="savelink";
+    link.classList = "download-btn";
+    link.href = saveURL;
+    link.download = "qrcode.png";
+    link.innerHTML="Save Image";
+    document.getElementById("generated").appendChild(link)
 }
 
 hidespinner();
