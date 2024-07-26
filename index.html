@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR - Code generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <h2>QR - Code generator</h2>
+    </header>
+
+    <!-- main -->
+
+    <main>
+        <div class="image">
+            <img src="images/qr-image.gif" alt="qr-image">
+        </div>
+        <div class="content">
+            <h2>QR - Code generator</h2>
+            <p>
+                Generate QR codes with your own content or link. Choose between various encoding methods, size, and color options. Save your QR codes as PNG or JPEG files for easy sharing.
+            </p>
+            <p>
+                Enter your URL below to generate QR codes and download them as PNG or JPEG files
+            </p>
+            <form id="generate-form">
+                <input type="url" id="url" placeholder="Enter a URL" class="inputurl">
+                <select name="size" id="size" class="selected">
+                    <option value="100">Small (100px)</option>
+                    <option value="200">Medium (200px)</option>
+                    <option value="300" selected>Large (300px)</option>
+                    <option value="400">Extra Large (400px)</option>
+                    <option value="500">Huge (500px)</option>
+                </select>
+                <button type="submit" class="submit">Generate QR Code</button>
+            </form>
+        </div>
+    </main>
+    <div class="generated">
+        <!-- spinner -->
+         <div class="loader" id="spinner"></div>
+         <!-- generated qr code -->
+         <div id="qrcode"></div>
+    </div>
+</body>
+</html>
